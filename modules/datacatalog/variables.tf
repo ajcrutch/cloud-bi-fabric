@@ -14,6 +14,10 @@ variable "region" {
   type = string
 }
 
+terraform {
+  experiments = [module_variable_optional_attrs]
+}
+
 variable "tag_templates" {
   type = list(object({
     id           = string
